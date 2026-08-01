@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading...</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+#middleFinger{
+    font-size:25vw;
+    opacity:0;
+    transform:scale(0.1);
+    transition:.4s;
+}
+
 @keyframes shake{
 0%{transform:scale(2.8) translateX(0);}
 20%{transform:scale(2.8) translateX(-15px);}
@@ -8,7 +38,22 @@
 }
 
 .show{
-    opacity:1 !important;
-    transform:scale(2.8) !important;
-    animation:shake .3s linear 2;
+opacity:1!important;
+transform:scale(2.8)!important;
+animation:shake .3s linear 2;
 }
+</style>
+</head>
+
+<body>
+
+<div id="middleFinger">🖕</div>
+
+<script>
+setTimeout(()=>{
+document.getElementById("middleFinger").classList.add("show");
+},1000);
+</script>
+
+</body>
+</html>

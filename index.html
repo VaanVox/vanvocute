@@ -1,0 +1,14 @@
+@keyframes shake{
+0%{transform:scale(2.8) translateX(0);}
+20%{transform:scale(2.8) translateX(-15px);}
+40%{transform:scale(2.8) translateX(15px);}
+60%{transform:scale(2.8) translateX(-10px);}
+80%{transform:scale(2.8) translateX(10px);}
+100%{transform:scale(2.8) translateX(0);}
+}
+
+.show{
+    opacity:1 !important;
+    transform:scale(2.8) !important;
+    animation:shake .3s linear 2;
+}

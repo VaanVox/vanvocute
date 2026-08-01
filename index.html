@@ -1,44 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Troll</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Không tìm thấy trang</title>
 
 <style>
-html,body{
-margin:0;
-height:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-background:black;
-overflow:hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-#middleFinger{
-font-size:30vw;
-opacity:0;
-transform:scale(.1);
-transition:all .4s;
+body{
+    background:#f8f9fa;
+    color:#202124;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-.show{
-opacity:1;
-transform:scale(3);
+.container{
+    text-align:center;
+    max-width:600px;
+    padding:20px;
+}
+
+h1{
+    font-size:90px;
+    color:#d93025;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#5f6368;
+}
+
+.error{
+    margin-top:25px;
+    padding:15px;
+    background:#eeeeee;
+    border-radius:8px;
+    font-family:monospace;
+    color:#444;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 28px;
+    border:none;
+    border-radius:8px;
+    background:#1a73e8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1558b0;
 }
 </style>
-
 </head>
 
 <body>
 
-<div id="middleFinger">🖕</div>
+<div class="container">
 
-<script>
-setTimeout(function(){
-document.getElementById("middleFinger").classList.add("show");
-},1000);
-</script>
+<h1>404</h1>
+
+<h2>Không tìm thấy trang</h2>
+
+<p>
+Trang web đã từ chối tải vì phát hiện thiết bị của bạn
+<strong>quá cùi.</strong>
+</p>
+
+<p>
+Vui lòng thử lại sau khi:
+<br><br>
+• Nâng cấp RAM <br>
+• Thay ổ HDD <br>
+• Mua laptop mới 
+</p>
+
+<div class="error">
+Mã lỗi: LAPTOP_CUI_404
+</div>
+
+<button onclick="location.reload()">
+Thử lại
+</button>
+
+</div>
 
 </body>
 </html>
